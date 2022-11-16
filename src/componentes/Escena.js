@@ -72,8 +72,8 @@ class Escena extends Phaser.Scene {
         //agregando las estrellas
         this.stars = this.physics.add.group({
             key: 'star',
-            repeat: 2,
-            setXY: { x: 200, y: 0, stepX: 70 }
+            repeat: 11,
+            setXY: { x: 12, y: 0, stepX: 70 }
         });
         //Esto si genera el rebote del grupo
         this.stars.children.iterate(function (child) {
@@ -121,7 +121,7 @@ class Escena extends Phaser.Scene {
             this.player.anims.play('turn');
         } //para saltar
         if (this.cursors.up.isDown && this.player.body.touching.down) {
-            this.player.setVelocityY(-200);
+            this.player.setVelocityY(-330);
         }
     }
 
